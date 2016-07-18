@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+*.tgz
+*.zip
+*.tar.gz
+*.war
+*.class
+bin/
+lib/
+FontAwesomeFX-app/
