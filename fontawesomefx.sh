@@ -13,7 +13,11 @@ cat <<EOF
 |_|  \___/|_| |_|\__/_/    \_\_/\_/ \___||___/\___/|_| |_| |_|\___| |_|    /_/ \_\\
 
 EOF
-print_blue "Java 9 Modules for FontAwesome FX"
+print_blue "---------------------------------------------"
+echo 
+print_blue "     FontAwesomeFX Java 9 Jigsaw Modules"
+echo 
+print_blue "---------------------------------------------"
 }
 
 print_message() {
@@ -131,26 +135,24 @@ link() {
 
 clean() {
   print_title "Clean"
-  print_message "Removing directory" "${APP_TITLE}"
-  (rm -rf ${APP_TITLE}) || exit
   print_message "Removing directory" "bin"
   (rm -rf bin) || exit
   print_message "Removing directory" "lib"
   (rm -rf lib) || exit
-  print_message "Removing directory" ${APP_TITLE}
-  (rm -rf ) || exit
+  print_message "Removing directory" "${APP_TITLE}"
+  (rm -rf ${APP_TITLE}) || exit
   print_done
 }
 
 help() {
   echo
-  print_message "Usage:" "${0} [ compile | assemle | link | clean | help ]"
+  print_message "Usage:" "${0} [ compile | assemble | link | clean | help ]"
 cat <<EOF
 
-    compile  : runs a mirrormaker docker container using mirrormaker.conf
-    assemble : stops and removes ALL running mirrormaker container artifatcs
-    link     : status if the mirrormaker docker containers
-    clean    : list current environment variables
+    compile  : compiles the source code
+    assemble : creates all modules
+    link     : linkes all modules and creates a demo app called "FontAwesomeFX-app"
+    clean    : deletes directories: bin lib, FontAwesomeFX-app
     help     : display this help
 
 EOF
