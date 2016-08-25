@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APP_TITLE="FontAwesomeFX-app"
+APP_TITLE="FontAwesomeFX-App"
 
 print_header() {
 cat <<EOF
@@ -58,7 +58,7 @@ compile() {
      "de.jensd.fx.glyphs.octicons"
      "de.jensd.fx.glyphs.weathericons"
      "de.jensd.fx.glyphs.materialicons"
-     "de.jensd.fx.glyphs.materialdesignicons" )
+     "de.jensd.fx.glyphs.materialdesignicons")
   for MODULE_NAME in "${modules[@]}"
   do
     print_message "compiling" "$MODULE_NAME"
@@ -99,7 +99,7 @@ assemble() {
     "octicons:OctIconsDemoApp"
     "weathericons:WeatherIconsDemoApp"
     "materialicons:MaterialIconsDemoApp"
-    "materialdesignicons:MaterialDesignIconsDemoApp" )
+    "materialdesignicons:MaterialDesignIconsDemoApp")
 
   for MODULE in "${modules[@]}"
   do
