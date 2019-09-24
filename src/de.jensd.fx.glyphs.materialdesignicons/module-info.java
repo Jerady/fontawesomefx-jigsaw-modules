@@ -4,5 +4,5 @@ module de.jensd.fx.glyphs.materialdesignicons {
     requires de.jensd.fx.glyphs.commons;
     requires javafx.controls;
     requires javafx.fxml;
-    requires transitive javafx.graphics;
+    requires javafx.graphics;
 }
